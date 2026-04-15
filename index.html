@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quicklist</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+        <nav>
+            <img src="./assets/Screenshot 2026-04-15 011949.png" alt="">
+            <a href="">quicklist</a>
+        </nav>
+        <a href="" id="return">
+            <img src="./assets/arrow.png" alt="">
+            <span>Voltar</span>
+        </a>
+        <h1>Compras da Semana</h1>
+        <form action="" id="form">
+            <input type="text" name="" id="add-item-input" placeholder="Adicione um novo item">
+            <button id="send">Adicionar item</button>
+        </form>
+        <span id="alerta" class="hidden">Digite algo !!!</span>
+        <ul>
+            <li>
+                <input type="checkbox">
+                <span>Pão de forma</span>
+                <button class="btn-del">
+                    <img src="./assets/Frame.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Café preto</span>
+                <button class="btn-del">
+                    <img src="./assets/Frame.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Suco de laranja</span>
+                <button class="btn-del">
+                    <img src="./assets/Frame.svg" alt="">
+                </button>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>Bolacha</span>
+                <button class="btn-del">
+                    <img src="./assets/Frame.svg" alt="">
+                </button>
+            </li>
+        </ul>
+        <div id="removido" class="hidden">
+            <img src="./assets/warning-circle-filled.svg" alt="">
+            <span></span>
+            <button id="fechar">
+                <img src="./assets/delete-small.svg" alt="">
+            </button>
+        </div>
+        <template id="item-template">
+            <li class="templateLi">
+                <input type="checkbox">
+                <span class="item-name"></span>
+                <button class="btn-del">
+                    <img src="./assets/Frame.svg" alt="">
+                </button>
+            </li>
+        </template>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
