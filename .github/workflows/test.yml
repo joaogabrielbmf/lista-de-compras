@@ -22,9 +22,3 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/ci-test-s3
           aws-region: us-east-1
 
-      - name: Add files to bucket
-        run: |
-          aws s3 sync . s3://test-ci-bmf \
-          --exclude ".git/*" \
-          --exclude "README.md" \
-          --exclude ".github/*"
