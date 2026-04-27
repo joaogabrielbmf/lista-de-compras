@@ -24,7 +24,7 @@ jobs:
 
       - name: Add files to bucket
         run: |
-          aws s3 sync . s3://test-ci-bmf \ 
+          aws s3 sync . s3://test-ci-bmf \
           --exclude ".git/*" \
           --exclude "README.md" \
           --exclude ".github/*"
