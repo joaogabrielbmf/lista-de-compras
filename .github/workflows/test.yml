@@ -1,0 +1,16 @@
+name: CLI test
+
+on:
+  push: 
+    branches: ["main"]
+
+jobs: 
+  test-cli:
+    runs-on: ubuntu-latest 
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
