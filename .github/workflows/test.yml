@@ -1,11 +1,11 @@
-name: CLI test
+name: CI test
 
 on:
   push: 
     branches: ["main"]
 
 jobs: 
-  test-cli:
+  test-ci:
     runs-on: ubuntu-latest 
 
     permissions:
@@ -22,5 +22,8 @@ jobs:
           role-to-assume: arn:aws:iam::011215723408:role/ci-test-s3
           aws-region: us-east-1
 
-      - name: add to bucket
-        run: aws s3 sync . s3://test-ci-bmf --exclude ".git/*"
+      - name: Add files to bucket
+        run: aws s3 sync . s3://test-ci-bmf \ 
+          --exclude ".git/*" \
+          --exclude "README.md" \
+          --exclude ".github/*"
